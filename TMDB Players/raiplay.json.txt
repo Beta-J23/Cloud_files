@@ -1,0 +1,11 @@
+{
+  "name": "Rai Play",
+  "addon": "plugin.video.raiplay",
+  "type": "video",
+  "priority": 100,
+  "action": "play"
+  "assert": {
+  	"play_movie": ["title", "year"],
+  	"play_episode": ["showname", "season", "episode"]
+}
+}

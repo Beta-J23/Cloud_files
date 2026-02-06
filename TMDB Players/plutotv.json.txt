@@ -1,0 +1,20 @@
+{
+  "name": "Pluto TV",
+  "addon": "plugin.video.plutotv",
+  "type": "video",
+  "priority": 100,
+  "is_resolvable": true,
+  "assert": {
+    "play_movie": ["title", "year"],
+    "play_episode": ["showname", "season", "episode"]
+  },
+  "play_movie": [
+    "plugin://plugin.video.plutotv/search?query={title}",
+    {"title": "(?i).*{title}.*", "year": "{year}"}
+  ],
+  "play_episode": [
+    "plugin://plugin.video.plutotv/search?query={showname}",
+    {"title": "(?i).*{showname}.*"},
+    {"season": "{season}", "episode": "{episode}"}
+  ]
+}
